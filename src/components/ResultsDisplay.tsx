@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Download, 
@@ -8,7 +7,12 @@ import {
   Activity,
   MapPin,
   Network,
-  LayoutGrid
+  LayoutGrid,
+  Eye,
+  Grid,
+  Flag,
+  Users,
+  FileText
 } from 'lucide-react';
 
 type AnalysisType = 
@@ -38,7 +42,6 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ analysisType, videoFile
     );
   }
 
-  // Render content based on selected analysis type
   const renderContent = () => {
     switch (analysisType) {
       case 'birdsEyeView':
