@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Eye, Target, Flag, Zap, BarChart, LineChart, Users, FileText } from 'lucide-react';
@@ -6,9 +5,9 @@ import Navbar from '@/components/Navbar';
 import FeatureCard from '@/components/FeatureCard';
 import ProcessSteps from '@/components/ProcessSteps';
 import FeatureSlider from '@/components/FeatureSlider';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
-  // Function to handle scroll animations
   useEffect(() => {
     const handleScroll = () => {
       const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -49,15 +48,17 @@ const Index = () => {
                 Soccerix is an AI-powered post-match soccer tactical analysis tool that automates team-level analysis, object detection and tracking, and event detection using advanced artificial intelligence and computer vision techniques.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
-                <Link to="/dashboard" className="btn-primary">
-                  <span className="flex items-center justify-center gap-2">
+                <Button asChild className="bg-soccerix-teal hover:bg-soccerix-teal/90 transition-all duration-300">
+                  <Link to="/dashboard" className="flex items-center justify-center gap-2">
                     Start Analysis
                     <ChevronRight size={18} />
-                  </span>
-                </Link>
-                <a href="#features" className="btn-secondary">
-                  Explore Features
-                </a>
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild className="border-soccerix-teal text-soccerix-teal hover:bg-soccerix-teal/5 transition-all duration-300">
+                  <a href="#features" className="flex items-center justify-center gap-2">
+                    Explore Features
+                  </a>
+                </Button>
               </div>
             </div>
             <div className="relative animate-fade-in">
@@ -86,7 +87,6 @@ const Index = () => {
           </div>
         </div>
         
-        {/* Background Elements */}
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-soccerix-teal/5 rounded-bl-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-soccerix-green/5 rounded-tr-full blur-3xl"></div>
       </section>
@@ -165,12 +165,12 @@ const Index = () => {
           <ProcessSteps />
           
           <div className="mt-10 text-center animate-on-scroll">
-            <Link to="/dashboard" className="btn-primary">
-              <span className="flex items-center justify-center gap-2">
+            <Button asChild className="bg-soccerix-teal hover:bg-soccerix-teal/90 transition-all duration-300">
+              <Link to="/dashboard" className="flex items-center justify-center gap-2">
                 Start Your Analysis
                 <Zap size={18} />
-              </span>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -207,12 +207,12 @@ const Index = () => {
               Start using Soccerix today to unlock powerful insights from your match footage.
             </p>
             <div className="animate-on-scroll">
-              <Link to="/dashboard" className="bg-white text-soccerix-teal rounded-lg px-8 py-4 font-medium hover:shadow-lg transition-all duration-300 inline-block">
-                <span className="flex items-center gap-2">
+              <Button asChild className="bg-white text-soccerix-teal hover:bg-white/90 transition-all duration-300">
+                <Link to="/dashboard" className="flex items-center gap-2">
                   Start Your Analysis Now
                   <ChevronRight size={18} />
-                </span>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
